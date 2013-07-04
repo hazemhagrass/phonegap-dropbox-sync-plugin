@@ -1,0 +1,152 @@
+commit ab9a17d3920008e607361acc55b4044034f3f081
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Mon Jun 3 12:17:17 2013 +0200
+
+    Refactor for testing
+
+commit c926deb6505224f980da390b397ba556ae78b460
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Mon Jun 3 11:58:20 2013 +0200
+
+    Refactor: use jquery mobile popup insteda of messi popup plugin
+
+commit 721290461e0be5a50d7ee1babf33e030e41615a7
+Author: m saad <mohamed.saad@badrit.com>
+Date:   Mon Jun 3 11:19:12 2013 +0200
+
+    font header
+
+commit 716343ec9d0fb57d0dc4037707a071bf1abd3b99
+Author: m saad <mohamed.saad@badrit.com>
+Date:   Mon Jun 3 11:16:14 2013 +0200
+
+    fix buttons
+
+commit 4c61ee8cdb836f49e8e8ed6b36916d0ff321eb34
+Author: m saad <mohamed.saad@badrit.com>
+Date:   Mon Jun 3 11:10:11 2013 +0200
+
+    new updates
+
+commit dc7f459eb125e7567171f1a3209c9c1ce94711dd
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun Jun 2 19:53:04 2013 +0200
+
+    Fixe: fix delete button to delete all data from local storge
+
+commit 26357ffaab490be433a3b2bd707a13db8ae90668
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun Jun 2 17:39:23 2013 +0200
+
+    Fixes: Mark Khatma as done
+
+commit 9873222a0028c5961889536af992d347c607ec3a
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun Jun 2 16:30:26 2013 +0200
+
+    add li element to loading ,Fixes: save soraPoints
+
+commit 7b827e49846d9e838cd55f70ad76e7cb603055fd
+Merge: 9c1b6d9 7062ab6
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Sun Jun 2 12:15:11 2013 +0200
+
+    Merge branch 'master' of ssh://gitlab.badrit.com:2200/hazem.hagrass/khatamat
+
+commit 9c1b6d918cc901b0bed57744199c671a2277fe57
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Sun Jun 2 12:14:43 2013 +0200
+
+    Refactor: speed up animations
+
+commit 7062ab6c4d00ec7dbb4b082acb107f91e555d8a7
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun Jun 2 11:16:47 2013 +0200
+
+    fix splashscree
+
+commit b971ee064d2aafbba593e4781b570a87ee04feac
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun Jun 2 11:13:35 2013 +0200
+
+    fix splashscreen
+
+commit be22919ee84071bd023924c966466abbbdc6415e
+Merge: 6cc4753 e2a6d57
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Fri May 31 17:50:13 2013 +0200
+
+    Resolve confilcts
+
+commit 6cc4753715308ce68fa18c4c72750077e2fb4781
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Fri May 31 17:46:20 2013 +0200
+
+    Refactor: Integrate with jqm instead of jqt
+
+commit e2a6d574a25fd4dd4d66cf970fca43fb1768b30c
+Author: m saad <mohamed.saad@badrit.com>
+Date:   Thu May 30 15:12:35 2013 +0200
+
+    fix font
+
+commit ee724b4981ef94cce264058abdc7f74c2581aa9f
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Tue May 28 14:12:13 2013 +0200
+
+    Add splashscreen
+
+commit dc1a71874213c66362615397a207db36a34145ea
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Tue May 28 12:18:58 2013 +0200
+
+    Fixes: use iscroll-lite instead of iscroll, adjust select box size
+
+commit 5bf09dbc40c82eb4df1b384fd513edf3b3f34843
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Mon May 27 15:11:25 2013 +0200
+
+    Refactor, Fix iscroll, maximizing fonts and lis
+
+commit d215a4a52791115b72df09b8e031811b3d747968
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Mon May 27 14:54:33 2013 +0200
+
+    make all li element clickable in khatamat_page
+
+commit c7549af0ce3d2059d7b06d4fba9526b165a36c02
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Mon May 27 12:57:42 2013 +0200
+
+    Refactor, fix sora number selector
+
+commit 5efcb97dcdd759747f66b9c1fee6ae74b42e6b9b
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Mon May 27 12:00:46 2013 +0200
+
+    Add select option to sora records
+
+commit beef72c2d35bec8d59cd64c9c879f5c5466098df
+Merge: 5fea07f ff36ea2
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Sun May 26 15:43:37 2013 +0200
+
+    Merge branch 'master' of ssh://gitlab.badrit.com:2200/hazem.hagrass/khatamat
+
+commit 5fea07f8cdf7d30e12a9e3574f26a2981fb09ef0
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Sun May 26 15:06:01 2013 +0200
+
+    Refactor
+
+commit ff36ea2d3c3854129b171f25ccad7d095333f544
+Author: Mohamed Salah <mohamed.salah@badrit.com>
+Date:   Sun May 26 11:05:38 2013 +0200
+
+    comment
+
+commit 0f819c891de116e689b21df7ccd6ea02ebfa075e
+Author: Hazem Hagrass <hazem.hagrass@badrit.com>
+Date:   Thu May 23 14:25:01 2013 +0200
+
+    Upgrading to cordova 2.7
