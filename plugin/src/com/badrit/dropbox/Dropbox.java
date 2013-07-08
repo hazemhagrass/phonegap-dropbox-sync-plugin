@@ -93,7 +93,6 @@ public class Dropbox extends CordovaPlugin {
 			} catch (JSONException e) {
 				Log.d("Dropbox", "Exception: " + e.getMessage());
 			}
-
 		} 
 		else if (action.equals("listFolder")) {
 			try {
@@ -107,13 +106,18 @@ public class Dropbox extends CordovaPlugin {
 
 	private void checkLink(){
 		Log.d("Dropbox", "Check dropbox linking");
+		
 		if (!mDbxAcctMgr.hasLinkedAccount()) {
+
 			sendPluginResult(PluginResult.Status.OK, "false");
-			Log.d("Dropbox", "Not linked");
-		} else {
-			sendPluginResult(PluginResult.Status.OK, "true");
-			Log.d("Dropbox", "Already linked");
 			
+			Log.d("Dropbox", "Not linked");
+
+		} else {
+			
+			sendPluginResult(PluginResult.Status.OK, "true");
+			
+			Log.d("Dropbox", "Already linked");
 		}
 	}
 
@@ -162,6 +166,7 @@ public class Dropbox extends CordovaPlugin {
 			Log.d("Dropbox", "IOException: " + e.getMessage());
 		}
 	}
+
 	private void listFolder(String path){
 		Log.d("Dropbox", "Listing folder, path: " + path);
 		JSONArray result = new JSONArray();
@@ -186,12 +191,14 @@ public class Dropbox extends CordovaPlugin {
 		}
 		sendPluginListFolder(PluginResult.Status.OK, result);
 	}
+
 	private void sendPluginResult(PluginResult.Status status, String result){
 		PluginResult res = new PluginResult(status,
 			result);
 		res.setKeepCallback(true);
 		callback.sendPluginResult(res);
 	}
+	
 	private void sendPluginListFolder(PluginResult.Status status, JSONArray result){
 		PluginResult res = new PluginResult(status,
 			result);
@@ -199,7 +206,6 @@ public class Dropbox extends CordovaPlugin {
 		callback.sendPluginResult(res);
 	}
 	
-
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_LINK_TO_DBX) {
