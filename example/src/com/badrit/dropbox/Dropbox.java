@@ -93,7 +93,6 @@ public class Dropbox extends CordovaPlugin {
 			} catch (JSONException e) {
 				Log.d("Dropbox", "Exception: " + e.getMessage());
 			}
-
 		} 
 		else if (action.equals("listFolder")) {
 			try {
@@ -107,13 +106,18 @@ public class Dropbox extends CordovaPlugin {
 
 	private void checkLink(){
 		Log.d("Dropbox", "Check dropbox linking");
+		
 		if (!mDbxAcctMgr.hasLinkedAccount()) {
+
 			sendPluginResult(PluginResult.Status.OK, "false");
-			Log.d("Dropbox", "Not linked");
-		} else {
-			sendPluginResult(PluginResult.Status.OK, "true");
-			Log.d("Dropbox", "Already linked");
 			
+			Log.d("Dropbox", "Not linked");
+
+		} else {
+			
+			sendPluginResult(PluginResult.Status.OK, "true");
+			
+			Log.d("Dropbox", "Already linked");
 		}
 	}
 
@@ -162,6 +166,7 @@ public class Dropbox extends CordovaPlugin {
 			Log.d("Dropbox", "IOException: " + e.getMessage());
 		}
 	}
+
 	private void listFolder(String path){
 		Log.d("Dropbox", "Listing folder, path: " + path);
 		JSONArray result = new JSONArray();
@@ -186,74 +191,25 @@ public class Dropbox extends CordovaPlugin {
 		}
 		sendPluginListFolder(PluginResult.Status.OK, result);
 	}
+
 	private void sendPluginResult(PluginResult.Status status, String result){
 		PluginResult res = new PluginResult(status,
 			result);
 		res.setKeepCallback(true);
 		callback.sendPluginResult(res);
 	}
+	
 	private void sendPluginListFolder(PluginResult.Status status, JSONArray result){
 		PluginResult res = new PluginResult(status,
 			result);
 		res.setKeepCallback(true);
 		callback.sendPluginResult(res);
 	}
-	// private void doDropboxTest() {
-	// try {
-	// final String TEST_DATA = "Hello Dropbox";
-	// final String TEST_FILE_NAME = "hello_dropbox.txt";
-	// DbxPath testPath = new DbxPath(DbxPath.ROOT, TEST_FILE_NAME);
-	//
-	// // Create DbxFileSystem for synchronized file access.
-	// DbxFileSystem dbxFs =
-	// DbxFileSystem.forAccount(mDbxAcctMgr.getLinkedAccount());
-	//
-	// // Print the contents of the root folder. This will block until we can
-	// // sync metadata the first time.
-	// List<DbxFileInfo> infos = dbxFs.listFolder(DbxPath.ROOT);
-	// mTestOutput.setText("\nContents of app folder:\n");
-	// for (DbxFileInfo info : infos) {
-	// mTestOutput.append("    " + info.path + ", " + info.modifiedTime + '\n');
-	// }
-	//
-	// // Create a test file only if it doesn't already exist.
-	// if (!dbxFs.exists(testPath)) {
-	// DbxFile testFile = dbxFs.create(testPath);
-	// try {
-	// testFile.writeString(TEST_DATA);
-	// } finally {
-	// testFile.close();
-	// }
-	// mTestOutput.append("\nCreated new file '" + testPath + "'.\n");
-	// }
-	//
-	// // Read and print the contents of test file. Since we're not making
-	// // any attempt to wait for the latest version, this may print an
-	// // older cached version. Use getSyncStatus() and/or a listener to
-	// // check for a new version.
-	// if (dbxFs.isFile(testPath)) {
-	// String resultData;
-	// DbxFile testFile = dbxFs.open(testPath);
-	// try {
-	// resultData = testFile.readString();
-	// } finally {
-	// testFile.close();
-	// }
-	// mTestOutput.append("\nRead file '" + testPath + "' and got data:\n    " +
-	// resultData);
-	// } else if (dbxFs.isFolder(testPath)) {
-	// mTestOutput.append("'" + testPath.toString() + "' is a folder.\n");
-	// }
-	// } catch (IOException e) {
-	// mTestOutput.setText("Dropbox test failed: " + e);
-	// }
-	// }
-
+	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_LINK_TO_DBX) {
 			if (resultCode == Activity.RESULT_OK) {
-				// doDropboxTest();
 			} else {
 				Log.d("Dropbox", "Link to Dropbox failed or was cancelled.");
 			}
