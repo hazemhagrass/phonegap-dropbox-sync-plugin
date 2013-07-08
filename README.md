@@ -28,14 +28,10 @@ recommended.
 
 7. Copy *JS* files to your *www* folder.
 	 
-Dropbox Sync API for IOS
+Dropbox Sync API for iOS
 ----------------------------
 	
- [source code](https://github.com/ccoenraets/phonegap-dropbox-sync) 
-
-**Note:**
-
-This plugin is inspired from [Dropbox Sync plugin](https://github.com/ccoenraets/phonegap-dropbox-sync) for IOS
+ This plugin is inspired from [Dropbox Sync plugin](https://github.com/ccoenraets/phonegap-dropbox-sync) for iOS
 	
 Refrences:
 
